@@ -1,0 +1,27 @@
+{
+	"name": "ds_testing_HDInsights",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_adls_covid",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "processed"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "000000_0",
+				"folderPath": "ecdc/testing",
+				"fileSystem": "processed"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"quoteChar": "\""
+		},
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
